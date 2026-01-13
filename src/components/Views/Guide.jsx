@@ -1,5 +1,6 @@
 import React from 'react';
 import { Info, Clock, ArrowUp } from 'lucide-react';
+import { IMAGES } from '../../data/images.js';
 
 const Guide = ({ getThemeClass }) => {
     return (
@@ -46,9 +47,14 @@ const Guide = ({ getThemeClass }) => {
 
                     <div className="space-y-4">
                         <div className="border border-slate-200 overflow-hidden">
-                            {/* Form Demo Image Placeholder */}
-                            <div className="h-32 bg-gradient-to-br from-blue-50 to-slate-50 border-b border-slate-200 flex items-center justify-center">
-                                <div className="text-3xl">🧘</div>
+                            {/* Form Demo Image - Plank */}
+                            <div className="h-32 bg-slate-100 border-b border-slate-200 overflow-hidden relative">
+                                <img
+                                    src={IMAGES.formGuide.plank}
+                                    alt="Plank form demonstration"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent" />
                             </div>
                             <div className="p-4">
                                 <div className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-2">
@@ -64,9 +70,14 @@ const Guide = ({ getThemeClass }) => {
                         </div>
 
                         <div className="border border-slate-200 overflow-hidden">
-                            {/* Form Demo Image Placeholder */}
-                            <div className="h-32 bg-gradient-to-br from-indigo-50 to-slate-50 border-b border-slate-200 flex items-center justify-center">
-                                <div className="text-3xl">💪</div>
+                            {/* Form Demo Image - Pull-Ups */}
+                            <div className="h-32 bg-slate-100 border-b border-slate-200 overflow-hidden relative">
+                                <img
+                                    src={IMAGES.formGuide.pullups}
+                                    alt="Pull-ups form demonstration"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent" />
                             </div>
                             <div className="p-4">
                                 <div className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-2">

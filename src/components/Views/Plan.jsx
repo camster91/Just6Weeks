@@ -1,6 +1,7 @@
 import React from 'react';
 import { Zap, CheckCircle2 } from 'lucide-react';
 import { EXERCISE_PLANS, formatValue, getRest } from '../../data/exercises.jsx';
+import { IMAGES } from '../../data/images.js';
 import { vibrate } from '../../utils/device';
 
 const Plan = ({
@@ -14,14 +15,17 @@ const Plan = ({
 
     return (
         <div className="space-y-6 pb-20">
-            {/* Exercise Demo Image Placeholder */}
-            <div className="relative h-64 bg-gradient-to-br from-slate-100 via-blue-50 to-slate-100 border border-slate-200 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                        <div className="text-7xl mb-3">{React.cloneElement(exercise.icon, { size: 80, className: "text-slate-300 mx-auto" })}</div>
-                        <p className="text-sm text-slate-500 font-semibold">{exercise.name} Demonstration</p>
-                        <p className="text-xs text-slate-400 mt-1">Exercise photo/video placeholder</p>
-                    </div>
+            {/* Exercise Demo Image */}
+            <div className="relative h-64 bg-slate-900 border border-slate-200 overflow-hidden">
+                <img
+                    src={IMAGES.exerciseDemo[activeExercise]}
+                    alt={`${exercise.name} demonstration`}
+                    className="w-full h-full object-cover opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-sm font-semibold">{exercise.name}</p>
+                    <p className="text-xs text-slate-300">Demonstration</p>
                 </div>
             </div>
 

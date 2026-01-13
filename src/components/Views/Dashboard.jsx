@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Zap, CheckCircle2 } from 'lucide-react';
 import { EXERCISE_PLANS } from '../../data/exercises.jsx';
+import { IMAGES } from '../../data/images.js';
 import { getDailyStack, getScheduleFocus } from '../../utils/schedule';
 import { vibrate } from '../../utils/device';
 import { calculateStats } from '../../utils/gamification';
@@ -11,13 +12,17 @@ const Dashboard = ({ completedDays, sessionHistory, setActiveExercise, setActive
 
     return (
         <div className="space-y-6 pb-24">
-            {/* Hero Image Placeholder */}
-            <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-200 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                        <div className="text-6xl mb-2">💪</div>
-                        <p className="text-xs text-slate-400 font-medium">Hero Image Placeholder</p>
-                    </div>
+            {/* Hero Image */}
+            <div className="relative h-48 bg-slate-900 border border-slate-200 overflow-hidden">
+                <img
+                    src={IMAGES.hero}
+                    alt="Fitness workout"
+                    className="w-full h-full object-cover opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-white">
+                    <h2 className="text-xl font-bold">Ready to Train</h2>
+                    <p className="text-xs text-slate-300">Your bodyweight journey starts here</p>
                 </div>
             </div>
 
@@ -151,10 +156,14 @@ const Dashboard = ({ completedDays, sessionHistory, setActiveExercise, setActive
                                 }}
                                 className="border border-slate-200 hover:border-blue-600 text-left transition-colors group overflow-hidden"
                             >
-                                {/* Exercise Image Placeholder */}
-                                <div className="relative h-32 bg-gradient-to-br from-slate-50 to-slate-100 border-b border-slate-200 -mx-0 -mt-0 mb-4 flex items-center justify-center">
-                                    <div className="text-4xl opacity-30">🏋️</div>
-                                    <div className="absolute bottom-2 right-2 text-[9px] text-slate-400">Image: {ex.name}</div>
+                                {/* Exercise Image */}
+                                <div className="relative h-32 bg-slate-100 border-b border-slate-200 overflow-hidden">
+                                    <img
+                                        src={IMAGES.exercises[key]}
+                                        alt={ex.name}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent" />
                                 </div>
 
                                 <div className="px-5 pb-5">

@@ -4,7 +4,7 @@
 
 Built with **React**, **Vite**, **TailwindCSS**, and **Glassmorphism Design**.
 
-![Shift6 Interface](https://via.placeholder.com/800x400?text=Shift6+Preview)
+![Shift6 Interface](https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=400&fit=crop&q=80)
 
 ## ✨ Features
 
